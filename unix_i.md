@@ -25,12 +25,30 @@
 
 ## What is the Unix shell?
 
+- a shell is a user interface for access to an **operating system**'s services.
+- a shell can be a **command line interface** or a **graphical user interface**
+- in a command line interface, the user issues commands to the program in the form of successive lines of text (command lines).
+- what is commonly referred as "Unix shell" is a set of commonly-used CLI programs.
+
+## Hands on:
+
+- Open your "Unix machine"
+- Open a terminal
+
+## Commands
+
+- A command is an instruction you send to the shell to ask it to execute an action.
+- 
+
 ## Syntax: command, options, arguments
+
+- the command: what action should be executed
+- the arguments: the object of the action
+- the options: flags that specify or modify the behaviour of the command
 
 Example: ls
 
 > ls -l
-
 > ls ~
 
 
