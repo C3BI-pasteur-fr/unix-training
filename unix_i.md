@@ -48,6 +48,7 @@
 Example: ls
 
 > ls -l
+
 > ls ~
 
 # The file system
