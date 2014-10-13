@@ -113,6 +113,8 @@ Example: ls
 
 > ssh.pasteur.fr
 
+![architecture outline](https://raw.githubusercontent.com/hmenager/unix-training/master/ssh-pasteur-fr.png)
+
 - Putty
 
 # Thank you
