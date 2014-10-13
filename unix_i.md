@@ -73,7 +73,7 @@ Example: ls
 ### mkdir
 
 - create one or more directories
-- <b>m</b>a<b>k</b>e <b>d</b>ectories
+- <b>m</b>a<b>k</b>e <b>d</b>irectories
 
 ## display/print files
 
