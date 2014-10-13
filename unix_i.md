@@ -51,11 +51,19 @@ Example: ls
 
 > ls ~
 
+# The File system
+Are you familiar with this?
+
+![phylogenic tree](F1.large.jpg)
+
 # The file system
 
 - Programs store data in files on disks.
 - A file system is the way the files are stored on a disk.
 - In Unix, the files are organized in a hierarchical structure of directories that contains other directories and/or files.
+
+![file system tree](UnixDirectoryTree.png)
+
 
 # Basic commands
 
