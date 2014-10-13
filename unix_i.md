@@ -38,7 +38,6 @@
 ## Commands
 
 - A command is an instruction you send to the shell to ask it to execute an action.
-- 
 
 ## Syntax: command, options, arguments
 
@@ -51,8 +50,11 @@ Example: ls
 > ls -l
 > ls ~
 
-
 # The file system
+
+- Programs store data in files on disks.
+- A file system is the way the files are stored on a disk.
+- In Unix, the files are organized in a hierarchical structure of directories that contains other directories and/or files.
 
 # Basic commands
 
