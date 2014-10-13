@@ -59,6 +59,50 @@ Example: ls
 
 # Basic commands
 
+## work with directories
+
+### ls
+
+- list the contents of a directory
+
+### pwd
+
+- display currrent directory 
+- **p**rint **w**orking **d**irectory
+
+### mkdir
+
+- create one or more directories
+- **m**a**k**e **dir**ectories
+
+## display/print files
+
+### more
+
+### less
+
+### cat
+
+### head
+
+### tail
+
+## work with files
+
+### cp
+
+### mv
+
+### rm
+
+## get help
+
+## info
+
+## man
+
+## cut, ta
+
 # Tasks management and chaining
 
 # How and where to connect on the IP servers?
