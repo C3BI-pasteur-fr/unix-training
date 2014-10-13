@@ -85,15 +85,27 @@ Are you familiar with this?
 
 ## display/print files
 
+### cat
+
+- display one or more files.
+- Con<b>cat</b>tenate and write file.
+- given one or more file names, write their contents to the terminal (standard output).
+
 ### more
+
+- display files 1 page at a time.
 
 ### less
 
-### cat
+- display files 1 page at a time, with additional capabilities.
 
 ### head
 
+- display the <b>head</b>er (first _n_ lines) of a file.
+
 ### tail
+
+- display the end (i.e., <b>tail</b>) of a file.
 
 ## work with files
 
