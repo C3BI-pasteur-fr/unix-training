@@ -63,17 +63,17 @@ Example: ls
 
 ### ls
 
-- list the contents of a directory
+- <b>l</b>i<b>s</b>t the contents of a directory
 
 ### pwd
 
 - display currrent directory 
-- **p**rint **w**orking **d**irectory
+- <b>p</b>rint <b>w</b>orking <b>d</b>irectory
 
 ### mkdir
 
 - create one or more directories
-- **m**a**k**e **dir**ectories
+- <b>m</b>a<b>k</b>e <b>d</b>ectories
 
 ## display/print files
 
