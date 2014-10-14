@@ -47,7 +47,7 @@
 
 Example: ls
 
-> ls -l
+> ls -l ../listeria/
 
 > ls ~
 

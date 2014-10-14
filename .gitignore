@@ -1,0 +1,7 @@
+.Rhistory
+.project
+.pydevproject
+.settings/
+.~lock.*
+build/
+
