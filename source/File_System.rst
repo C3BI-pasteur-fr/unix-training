@@ -97,16 +97,17 @@ let's go for exploration
 * I need to know how to move.
 * I need how to specify my destination.
 
-* how to move?
+.. rst-class:: build
+
+   * how to move?
     
-    * ``cd``  (**c**\ hanging **d**\ irectory) 
+      * ``cd``  (**c**\ hanging **d**\ irectory) 
+      * ``cd location``
     
-* how to specify my destination?
-   
-   * two possibilities:
+   * how to specify a location?
       
-      * give absolute position of youre destination (same system of coordinates as pwd)
-      * relative path
+         #. give absolute position of youre destination
+         #. give relative path
       
       
 absolute path
@@ -114,7 +115,105 @@ absolute path
 
 .. figure:: /_static/local_abs_path.png
    :class: align-center
+   :width: 700px
+
+abolute path to file *abc_mouse.fa*
+
+exercise:
+   use command cd to explore the file systems.
+
+relative path
+=============
+
+.. figure:: /_static/local_relative_path.png
+   :class: align-center
    :width: 600px
+
+so we need to upgrade our location vocalbulary:
+    
+    * where a I am : **.**
+    * one level up : **..**
+
+exercise:
+   use command cd to explore the file systems using relative path.
+
+shortcuts
+=========
+
+* I want to go home => **cd** or **cd ~**
+
+* I want to go back to my previous location => **cd -**
+
+
+Exploration
+===========
+
+| each machine have it's own map.
+| we have not a map for all machines.
+| So we have to explore.
+
+what are there in a this directory?
+
+.. rst-class:: build
+   
+   * ls (list directory contents)
+
+ls
+==
+
+* ls location (list directory contents display it in lexicographic order)
+
+some useful options:
+
+* ls -l : use a long listing format
+* ls -a : do not ignore entries starting with **.** (ls -al)
+* ls -d : list directory entries instead of contents
+* ls -t : sort by modification time
+* ls -r : reverse order while sorting
+
+   * ls -lrt : ???
+
+exrecise:
+   go in ~/DataBio/ , explore the subtree 
+
+
+special characters
+==================
+
+jockers:
+
+* \* replace any characters
+* ? replace one charracter
+* [] specify a set of possible characters
+
+
+create direcotries
+==================
+
+mkdir
+
+mkdir -p
+
+exercise:
+
+go in youre home: 
+create a directory 
+go in, create 
+
+
+copy a file
+===========
+
+
+mv a file
+=========
+
+
+Permission
+==========
+
+
+
 
 
 File system on Pasteur server
