@@ -14,4 +14,5 @@ Contents:
    Introduction
    File_System
    Connect_IP_servers
-
+   Display_Files
+   Online_Help
