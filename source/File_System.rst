@@ -161,7 +161,7 @@ what are there in a this directory?
 ls
 ==
 
-* ls location (list directory contents display it in lexicographic order)
+* **ls path** (list directory contents display it in lexicographic order)
 
 some useful options:
 
@@ -180,34 +180,111 @@ exrecise:
 special characters
 ==================
 
-jockers:
+When a user want to execute a command on several files with similar names,
+or if he don't know the exact names, he can use **jockers**:
 
-* \* replace any characters
-* ? replace one charracter
-* [] specify a set of possible characters
+* **\*** replace any characters (0 or more characters)
+* **?** replace one character (1 character)
+* **[...]** specify a set of possible characters
+
+jockers exercises
+=================
+
+* ls -l ~/DataBio/Sequences/Nucleique/*.fasta
+* ls -l ~/DataBio/Sequences/Proteique/*.fasta
+* ls -l ~/DataBio/Sequences/Proteique/*.fasta
+* ls -l ~/DataBio/Sequences/*/
+
+* ls -l ~/DataBio/Sequences/*/q?1.*
+
+how to get the listing of all files like abcd2_mouse.fa or abcd3_human.sp but **NOT**
+abcd_result.txt?
 
 
 create direcotries
 ==================
 
-mkdir
-
-mkdir -p
+* **mkdir path** create a directory. 
+* **mkdir -p path** create intermediate directories if necessary.
 
 exercise:
+| go in youre home: 
+| create a directory 
+| go in, create 
 
-go in youre home: 
-create a directory 
-go in, create 
+
+copy file and directory
+=======================
+
+* **cp file1 file2**
+* **cp file1 (file2 ...) directory**
+* **cp -r dir1 dir2** 
+
+you can use option -p to preserve rights (owner, group, last acces and modification date) 
 
 
-copy a file
+mv/rename file/direcoties
+=========================
+
+* **mv src dest** (src and dest are paths) 
+
+you can specifies several src like mv src1 src2 src2 ... dest
+
+.. warning::
+   the **mv** command has not the same effect according src and dest are directories
+   or files
+   
++--------------+-----------+------------------------------------------------------------+
+| src type     | dest type | action                                                     |
++==============+===========+============================================================+
+| one file     | file      | the src file is rename into dest file                      |
+|              |           | beware if dest file already exists it's lost               |
++--------------+-----------+------------------------------------------------------------+
+| several file | file      | all src files are lost only the last one is rename as dest |
++--------------+-----------+------------------------------------------------------------+
+| file         | dest      | all src files are moved in dest directory                  |
+|              |           | dest directory must exists. If not it is consider as file  |
++--------------+-----------+------------------------------------------------------------+
+| dest         | dest      | all src directories are moved in dest directory            |
+|              |           | the dest directory must already exists                     |
++--------------+-----------+------------------------------------------------------------+
+
+
+remove file
 ===========
+ 
+* **rm file1 file2 file ...** remove files (**Not** directories)
+* **rmdir dir1 dir2 ...** remove **empty** directories 
+   * empty mean no files even files starting with dot, no directories. 
 
+.. warning::
+   by default th user is not asked before to delete a file or not.
+   You are big guy, you know what you do.
+   
+   if you are unsure you can add -i option. In this case you will prompt
+   before deleting an item.
+    
+.. rst-class:: build
+   
+   * **rm -R directory** delete all files in directory recursively then the directory itself.
+   
+   
+link
+====
 
-mv a file
-=========
+| In unix as other systems we can create shortcut for files or directory.
+| We call them links. There is several kind of links, here we will see only simbolic links.
+| when you list a directory (ls -l) they appear like that: ::
 
+   lrwxrwxrwx 1 bneron  bneron      27 Oct 15 13:34 file1 -> /home/bneron/very_big_fasta
+ 
+The command establishing this link is: ::
+
+   ln -s /home/bneron/very_big_fasta file1
+   
+* ln -s source_file  link_name
+
+We can create a link toward a directory
 
 Permission
 ==========
@@ -225,3 +302,6 @@ File system on Pasteur server
    
 abolute path to home of user login_2 : /pasteur/homes/login_2
    
+drwxr-xr-x 9 bneron sis 192 Aug 27  2009 DataBio/
+
+
