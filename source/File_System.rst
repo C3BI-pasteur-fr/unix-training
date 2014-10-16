@@ -335,6 +335,22 @@ rwx what does it really mean?
 | x | 1 | the file is executable | allow to enter and pass trhough the directory   |
 +---+---+------------------------+-------------------------------------------------+
 
+who am I?
+=========
+
+Permisions are based on your identity and the groups to wich you belong.
+
+* **whoami** => give you the login you logged with
+* **id  <login>** => give the id and the groups to which the login blong (login is optional) ::
+
+   bneron@bic-t2a:~$id
+   uid=2896(bneron) gid=3044(CIB) groups=3044(CIB),87(biok),110(sis),547(mobyle),990(gensoft),3160(vpn-ssl-users),20000(bioweb)
+ 
+* uid is my login
+* gid is my primary group
+* groups is the list of all groups to which I belongs (max 16 groups).
+
+
 change permisions
 =================
 
