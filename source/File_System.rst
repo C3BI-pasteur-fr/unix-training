@@ -375,11 +375,73 @@ change permisions syntax 2
 
 **chmod num_value <target>**
 
-change permissions by default
-=============================
+permissions by default
+======================
 
-umask 
+To controls the file/dir's permissions at their creation.
+
+* **umask** display the mask in octal notation: 0022 
+* **umask -S** display the mask in symbolic notation: u=rwx,g=rx,o=rx
+
+| umask is the complement to 7 to the permissions applied
+| umask = 0022 
+
+| **directories**: permissions are 777
+| 7-0=\ **7**, 7-0=\ **7**, 7-2=\ **5**, 7-2=\ **5** 
+| directories will be created with 755 rights (rwxr-xr-x)
+
+| **files** is same as dir except, never **x** by default
+| 7-0=\ **7**, 7-0=\ **7**, 7-2=\ **5**, 7-2=\ **5** then remove **x** if necessary 
+| files will be created with 644 rights (rw-r--r--)
+
+octal codes meaning
+===================
+
++----------------+---------------------+----------------+
+| Octal digit in |                     |                |
+| umask command  | Allows on directory | allows on file |
++================+=====================+================+
+| 0              | read, write,execute | read, write    |
++----------------+---------------------+----------------+
+| 1              | read and write      | read, write    |
++----------------+---------------------+----------------+
+| 2              | read and execute    | read           |
++----------------+---------------------+----------------+
+| 3              | read only           | read           |
++----------------+---------------------+----------------+
+| 4              | write and execute   | write          |
++----------------+---------------------+----------------+
+| 5              | write only          | write          |
++----------------+---------------------+----------------+
+| 6              | execute only        | no permissions |
++----------------+---------------------+----------------+
+| 7              | no permissions      | no permissions |
++----------------+---------------------+----------------+
+
+
+setting the umask
+=================
+
+* **umask octal_value**
+* **umask -S symbolic value**
+
+::
+
+   umask 001
+   umask -S
+   u=rwx,g=rx,o=rx
+   umask -S o+w
+   u=rwx,g=rx,o=rwx
+   
+exercise:
+
+| create dir and files (use touch) with different umask
+| check their permisions with ls -l
+
+.. role:: red
  
+:red:`To set x on file you need to use chmod.`
+
 change owner/group
 ==================
 
