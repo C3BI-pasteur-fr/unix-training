@@ -392,26 +392,26 @@ change permisions syntax 2
 octal notation
 ==============
 
-+------------+----------+------------------------+
-| Symbolic   | Octal    | English                |
-| Notation   | Notation |                        |
-+============+==========+========================+
-| ---------- | 0000     | no permissions         |
-+------------+----------+------------------------+
-| ---x--x--x | 0111     | execute                |
-+------------+----------+------------------------+
-| --w--w--w- | 0222     | write                  |
-+------------+----------+------------------------+
-| --wx-wx-wx | 0333     | write & execute        |
-+------------+----------+------------------------+
-| -r--r--r-- | 0444     | read                   |
-+------------+----------+------------------------+
-| -r-xr-xr-x | 0555     | read & execute         |
-+------------+----------+------------------------+
-| -rw-rw-rw- | 0666     | read & write           |
-+------------+----------+------------------------+
-| -rwxrwxrwx | 0777     | read, write, & execute |
-+------------+----------+------------------------+
++------------+----------+-----------------------+
+| Symbolic   | Octal    | English               |
+| Notation   | Notation |                       |
++============+==========+=======================+
+| ---------- | 0000     | no permissions        |
++------------+----------+-----------------------+
+| ---x--x--x | 0111     | execute               |
++------------+----------+-----------------------+
+| --w--w--w- | 0222     | write                 |
++------------+----------+-----------------------+
+| --wx-wx-wx | 0333     | write & execute       |
++------------+----------+-----------------------+
+| -r--r--r-- | 0444     | read                  |
++------------+----------+-----------------------+
+| -r-xr-xr-x | 0555     | read & execute        |
++------------+----------+-----------------------+
+| -rw-rw-rw- | 0666     | read & write          |
++------------+----------+-----------------------+
+| -rwxrwxrwx | 0777     | read, write & execute |
++------------+----------+-----------------------+
 
 **exercises:**
 
@@ -436,6 +436,7 @@ To controls the file/dir's permissions at their creation.
 | **files** is same as dir except, never **x** by default
 | 7-0=\ **7**, 7-0=\ **7**, 7-2=\ **5**, 7-2=\ **5** then remove **x** if necessary 
 | files will be created with 644 rights (rw-r--r--)
+
 
 octal codes meaning
 ===================
@@ -488,18 +489,20 @@ exercise:
 change owner/group
 ==================
 
+chown command (for **ch**\ ange **ow** ner)
 
+* **chown owner file/dir**  
+* **chown owner.group file/dir**
 
+:red:`the ownership of a file may only be altered by a super-user`
 
-File system on Pasteur server
-=============================
-
-.. figure:: _static/images/home_abs_path.png
-   :class: align-center
-   :width: 600px
+* **chgrp group file/dir**
+  
+.. warning::
    
-abolute path to home of user login_2 : /pasteur/homes/login_2
+   * Only a member of a group can change a file's group
+   * And only to one of which they are a member.
    
-drwxr-xr-x 9 bneron sis 192 Aug 27  2009 DataBio/
+* **-R** option recurse through subdirectories.
 
-
+   
