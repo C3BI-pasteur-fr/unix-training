@@ -330,7 +330,7 @@ rwx what does it really mean?
 +===+===+========================+=================================================+
 | r | 4 | read                   | allow to list                                   |
 +---+---+------------------------+-------------------------------------------------+
-| w | 3 | write                  | allow to create and delete file and directories |
+| w | 2 | write                  | allow to create and delete file and directories |
 +---+---+------------------------+-------------------------------------------------+
 | x | 1 | the file is executable | allow to enter and pass trhough the directory   |
 +---+---+------------------------+-------------------------------------------------+
@@ -374,6 +374,49 @@ change permisions syntax 2
 ==========================
 
 **chmod num_value <target>**
+
+| num value is composed of 3 digits respectively for
+| user, group, other
+| each value is the sum of the octal symbols
+| for instance for w => 4, read rw => 4+2 = 6 ...  
+
+::
+   
+   -rw-r--r-- 1 bneron sis 0 Oct 16 13:59 file1
+   chmod 755 file1
+   -rwxr-xr-x 1 bneron sis 0 Oct 16 13:59 file1
+   chmod 640 file1
+   -rw-r----- 1 bneron sis 0 Oct 16 13:59 file1
+   
+   
+octal notation
+==============
+
++------------+----------+------------------------+
+| Symbolic   | Octal    | English                |
+| Notation   | Notation |                        |
++============+==========+========================+
+| ---------- | 0000     | no permissions         |
++------------+----------+------------------------+
+| ---x--x--x | 0111     | execute                |
++------------+----------+------------------------+
+| --w--w--w- | 0222     | write                  |
++------------+----------+------------------------+
+| --wx-wx-wx | 0333     | write & execute        |
++------------+----------+------------------------+
+| -r--r--r-- | 0444     | read                   |
++------------+----------+------------------------+
+| -r-xr-xr-x | 0555     | read & execute         |
++------------+----------+------------------------+
+| -rw-rw-rw- | 0666     | read & write           |
++------------+----------+------------------------+
+| -rwxrwxrwx | 0777     | read, write, & execute |
++------------+----------+------------------------+
+
+**exercises:**
+
+| create files and directories, 
+| change their permisions.
 
 permissions by default
 ======================
