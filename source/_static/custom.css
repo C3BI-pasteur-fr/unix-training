@@ -1,0 +1,29 @@
+@import url("single.css"); /* make sure to sync this with the base theme's css filename */
+
+
+table.docutils {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table.docutils td, table.docutils th {
+    border-color: -moz-use-text-color -moz-use-text-color #aaa;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 8px 1px 5px;
+}
+
+
+.red-font {
+    color:red;
+}
+
+
+.highlight-text .highlight .hll {
+    background-color: #FF6666;
+}
+
+div.warning{
+	background-color: #ffe4e4;
+    border: 1px solid #f66;
+}

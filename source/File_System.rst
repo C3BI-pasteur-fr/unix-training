@@ -38,14 +38,14 @@ do you already know a tree structure in biology?
 
 .. rst-class:: build
 
-   .. figure:: /_static/F1.large.jpg
+   .. figure:: /_static/images/F1.large.jpg
       :class: align-center
       :width: 500px
 
 file sytem tree structure
 =========================
 
-.. figure:: /_static/UnixDirectoryTree.png
+.. figure:: /_static/images/UnixDirectoryTree.png
       :class: align-center
       :width: 450px
 
@@ -83,7 +83,7 @@ where am I on the map?
 
 This is my map!
 
-.. figure:: /_static/local_file_system.png
+.. figure:: /_static/images/local_file_system.png
       :class: align-center
       :width: 600px
       
@@ -113,7 +113,7 @@ let's go for exploration
 absolute path
 =============
 
-.. figure:: /_static/local_abs_path.png
+.. figure:: /_static/images/local_abs_path.png
    :class: align-center
    :width: 700px
 
@@ -125,7 +125,7 @@ exercise:
 relative path
 =============
 
-.. figure:: /_static/local_relative_path.png
+.. figure:: /_static/images/local_relative_path.png
    :class: align-center
    :width: 600px
 
@@ -186,14 +186,16 @@ or if he don't know the exact names, he can use **jockers**:
 * **\*** replace any characters (0 or more characters)
 * **?** replace one character (1 character)
 * **[...]** specify a set of possible characters
+* **[x-y]** allow characters from **x** to **z** in lexicographic order
+* **\\** escape any characters
 
 jockers exercises
 =================
 
-* ls -l ~/DataBio/Sequences/Nucleique/*.fasta
-* ls -l ~/DataBio/Sequences/Proteique/*.fasta
-* ls -l ~/DataBio/Sequences/Proteique/*.fasta
-* ls -l ~/DataBio/Sequences/*/
+* ls -l ~/DataBio/Sequences/Nucleique/\*.fasta
+* ls -l ~/DataBio/Sequences/Proteique/\*.fasta
+* ls -l ~/DataBio/Sequences/Proteique/\*.fasta
+* ls -l ~/DataBio/Sequences/\*/
 
 * ls -l ~/DataBio/Sequences/*/q?1.*
 
@@ -208,6 +210,7 @@ create direcotries
 * **mkdir -p path** create intermediate directories if necessary.
 
 exercise:
+
 | go in youre home: 
 | create a directory 
 | go in, create 
@@ -223,16 +226,18 @@ copy file and directory
 you can use option -p to preserve rights (owner, group, last acces and modification date) 
 
 
-mv/rename file/direcoties
-=========================
+mv/rename file/directories
+==========================
 
 * **mv src dest** (src and dest are paths) 
 
 you can specifies several src like mv src1 src2 src2 ... dest
 
-.. warning::
-   the **mv** command has not the same effect according src and dest are directories
-   or files
+
+mv warning
+==========
+   
+The **mv** command has not the same effect according src and dest are directories or files
    
 +--------------+-----------+------------------------------------------------------------+
 | src type     | dest type | action                                                     |
@@ -258,7 +263,7 @@ remove file
    * empty mean no files even files starting with dot, no directories. 
 
 .. warning::
-   by default th user is not asked before to delete a file or not.
+   by default the user is not asked before to delete a file or not.
    You are big guy, you know what you do.
    
    if you are unsure you can add -i option. In this case you will prompt
@@ -286,9 +291,81 @@ The command establishing this link is: ::
 
 We can create a link toward a directory
 
-Permission
-==========
+Permissions
+===========
 
+* Unix is a multi-users system. So some users have some rights to do something and some other not.
+* The system allow to protect your data form an other user.
+* The system allow some users to work in groups.
+
+all this features are managed  by the **permissions** (or right access)
+
+3 classes of permissions
+========================
+
+::
+
+   $ ls -l
+   total 1176
+   drwxr-xr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
+   -rw-r--r-- 1 bneron CIB 220196 Mar  4  2014 CIP-55-138_A.b_A06_037.ab1
+   drwxr-xr-x 3 bneron bneron   4096 Jun  4 14:51 HMM
+   
+.. figure:: _static/images/permissions.png
+   :class: align-center
+   :width: 650px
+
+| **U**: user 
+| **G**: group
+| **O**: others
+| **r**: read      (4)
+| **w**: write     (2)
+| **x**: execute   (1)
+ 
+rwx what does it really mean?
+=============================
+
++---+---+------------------------+-------------------------------------------------+
+|   |   | file                   | directory                                       |
++===+===+========================+=================================================+
+| r | 4 | read                   | allow to list                                   |
++---+---+------------------------+-------------------------------------------------+
+| w | 3 | write                  | allow to create and delete file and directories |
++---+---+------------------------+-------------------------------------------------+
+| x | 1 | the file is executable | allow to enter and pass trhough the directory   |
++---+---+------------------------+-------------------------------------------------+
+
+change permisions
+=================
+
+**chmod [ugo] [+-] [rwx] <target>**
+
+::
+ 
+   chmod [ugo] [+-] [rwx] <target>
+
+   drwxr-xr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
+   chmod g+w Alignment
+   drwxrgxr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
+   chmod o-rx
+   drwxrgx--- 4 bneron CIB   4096 Mar  4  2014 Alignment
+   chmod g-wo+x
+   chmod: invalid mode: 'g-wo+x'
+   
+you can use -R option to apply permision to a directory and recursively to its contents.
+
+change permisions syntax 2
+==========================
+
+**chmod num_value <target>**
+
+change permissions by default
+=============================
+
+umask 
+ 
+change owner/group
+==================
 
 
 
@@ -296,7 +373,7 @@ Permission
 File system on Pasteur server
 =============================
 
-.. figure:: /_static/home_abs_path.png
+.. figure:: _static/images/home_abs_path.png
    :class: align-center
    :width: 600px
    
