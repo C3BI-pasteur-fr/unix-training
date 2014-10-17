@@ -13,8 +13,8 @@ Contents:
 
 
    Finding_Files
-   Finding_In_File
+   Finding_In_Files
    Replace
-   Backgounding tasks
+   Backgrounding_tasks
    Module
    
