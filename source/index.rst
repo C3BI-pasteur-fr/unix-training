@@ -16,3 +16,5 @@ Contents:
    Connect_IP_servers
    Display_Files
    Online_Help
+   Archive_and_compressed_files
+   Chain_commands
