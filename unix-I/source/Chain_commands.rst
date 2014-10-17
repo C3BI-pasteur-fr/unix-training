@@ -21,10 +21,11 @@ redirection
 
 quizz?
 
-| how to redirect stdout and stderr in same file?
+* how to redirect stdout and stderr in same file?
 
 return values
 =============
+
 
 echo $?
 
