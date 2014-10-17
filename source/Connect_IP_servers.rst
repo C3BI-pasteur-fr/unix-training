@@ -112,3 +112,9 @@ or
 | *activate it on mac osX*
 | the remote server become your PC.
 
+why it's better to use @home/@unit
+==================================
+
+.. figure:: _static/images/ssh-pasteur-fr.png
+   :class: align-center
+   :width: 700px
