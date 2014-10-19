@@ -6,8 +6,6 @@
 Unix I
 ******
 
-Contents:
-
 .. toctree::
    :maxdepth: 1
 
