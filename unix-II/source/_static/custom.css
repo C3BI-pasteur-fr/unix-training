@@ -27,3 +27,10 @@ div.warning{
 	background-color: #ffe4e4;
     border: 1px solid #f66;
 }
+
+
+tt {
+    background-color: #ecf0f3;
+    font-size: 0.95em;
+    padding: 0 1px;
+}
