@@ -200,5 +200,5 @@ command2 will be executed if and only if command1 returned zero exit status.
 .. warning::
 
    The exit status depends how the developer implement programs.
-   sometimes the developer does not follow the convention.
-   so it's not possible to chain correctly those programs.
+   Sometimes the developer does not follow the convention.
+   So it's not possible to chain correctly those programs.
