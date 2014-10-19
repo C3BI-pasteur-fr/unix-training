@@ -38,7 +38,7 @@ do you already know a tree structure in biology?
 
 .. rst-class:: build
 
-   .. figure:: /_static/images/F1.large.jpg
+   .. figure:: /_static/images/F1_large.jpg
       :class: align-center
       :width: 500px
 
@@ -88,14 +88,14 @@ This is my map!
       :width: 600px
       
 * So now, I know where I'am.
-* But know, I'd like to explore the map.
+* But now, I'd like to explore the map.
 
 
 let's go for exploration
 ========================
 
 * I need to know how to move.
-* I need how to specify my destination.
+* I need know how to specify my destination.
 
 .. rst-class:: build
 
@@ -120,7 +120,7 @@ absolute path
 abolute path to file *abc_mouse.fa*
 
 exercise:
-   use command cd to explore the file systems.
+   use command ``cd`` to explore the file systems.
 
 relative path
 =============
@@ -135,20 +135,20 @@ so we need to upgrade our location vocalbulary:
     * one level up : **..**
 
 exercise:
-   use command cd to explore the file systems using relative path.
+   use command ``cd`` to explore the file systems using relative path.
 
 shortcuts
 =========
 
-* I want to go home => **cd** or **cd ~**
-* I want to go in the home of foobar  **cd ~foobar**
-* I want to go back to my previous location => **cd -**
-* use ``tab`` to display the completion.
+* I want to go home => ``cd`` or ``cd ~``
+* I want to go in the home of foobar  ``cd ~foobar``
+* I want to go back to my previous location => ``cd -``
+* use ``tab`` to display the path completion.
 
 Exploration
 ===========
 
-| each machine have it's own map.
+| Each machine have it's own map.
 | we have not a map for all machines.
 | So we have to explore.
 
@@ -156,7 +156,7 @@ what are there in a this directory?
 
 .. rst-class:: build
    
-   * ls (list directory contents)
+   * ``ls`` (list directory contents)
 
 ls
 ==
@@ -165,16 +165,18 @@ ls
 
 some useful options:
 
-* ls -l : use a long listing format
-* ls -a : do not ignore entries starting with **.** (ls -al)
-* ls -d : list directory entries instead of contents
-* ls -t : sort by modification time
-* ls -r : reverse order while sorting
+* ``ls -l`` : use a long listing format
+* ``ls -a`` : do not ignore entries starting with **.** (ls -al)
+* ``ls -d`` : list directory entries instead of contents
+* ``ls -t`` : sort by modification time
+* ``ls -r`` : reverse order while sorting
 
-   * ls -lrt : ???
+   * ``ls -lrt`` : what does it mean?
 
 exrecise:
-   go in ~/DataBio/ , explore the subtree 
+---------
+   
+Go in ``~/DataBio/`` , explore the subtree.
 
 
 special characters
@@ -192,12 +194,12 @@ or if he don't know the exact names, he can use **jockers**:
 jockers exercises
 =================
 
-* ls -l ~/DataBio/Sequences/Nucleique/\*.fasta
-* ls -l ~/DataBio/Sequences/Proteique/\*.fasta
-* ls -l ~/DataBio/Sequences/Proteique/\*.fasta
-* ls -l ~/DataBio/Sequences/\*/
+* ``ls -l ~/DataBio/Sequences/Nucleique/\*.fasta``
+* ``ls -l ~/DataBio/Sequences/Proteique/\*.fasta``
+* ``ls -l ~/DataBio/Sequences/Proteique/\*.fasta``
+* ``ls -l ~/DataBio/Sequences/\*/``
 
-* ls -l ~/DataBio/Sequences/*/q?1.*
+* ``ls -l ~/DataBio/Sequences/*/q?1.*``
 
 how to get the listing of all files like abcd2_mouse.fa or abcd3_human.sp but **NOT**
 abcd_result.txt?
@@ -213,7 +215,7 @@ exercise:
 
 | go in youre home: 
 | create a directory 
-| go in, create 
+| go in, create a directory ``sandbox``, and in this directory 2 directories ``data``, ``results``
 
 
 copy file and directory
@@ -225,6 +227,9 @@ copy file and directory
 
 you can use option -p to preserve rights (owner, group, last acces and modification date) 
 
+exercise:
+
+copy hmm files (ending with *.hmm*) in *~/DataBio/HMM/* in data directory you just make.
 
 mv/rename file/directories
 ==========================
@@ -254,6 +259,10 @@ The **mv** command has not the same effect according src and dest are directorie
 |              |           | the dest directory must already exists                     |
 +--------------+-----------+------------------------------------------------------------+
 
+exercise:
+---------
+
+mv files blast2 report in *~/DataBio/* in *sandbox/results*
 
 remove file
 ===========
@@ -273,6 +282,10 @@ remove file
    
    * **rm -R directory** delete all files in directory recursively then the directory itself.
    
+exercise:
+---------
+
+remove all *sandbox* subtree 
    
 link
 ====
@@ -321,6 +334,7 @@ all this features are managed  by the **permissions** (or right access)
 | **r**: read      (4)
 | **w**: write     (2)
 | **x**: execute   (1)
+ 
  
 rwx what does it really mean?
 =============================
@@ -480,7 +494,7 @@ setting the umask
 exercise:
 
 | create dir and files (use touch) with different umask
-| check their permisions with ls -l
+| check their permisions with ``ls -l``
 
 .. role:: red
  

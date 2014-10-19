@@ -50,22 +50,13 @@ Syntax: command, options, arguments
 * the arguments: the object of the action
 * the options: flags that specify or modify the behaviour of the command
    
-.. warning::
+   * options are usually preceded by 
    
-   truc a mettre en rouge
-  
-   
-sous titre
-----------
-
-blab lab  
-   
-.. tabularcolumns:: |p{2cm}|p{15cm}|
-   
-+-------+---------+
-| table | example |
-+=======+=========+
-| truc  | bidule  |
-+-------+---------+
-
+      * ``-`` if its a one letter option
+      * ``--`` if its a word option
+      
+      ::
+ 
+         ls -a
+         ls --all
 

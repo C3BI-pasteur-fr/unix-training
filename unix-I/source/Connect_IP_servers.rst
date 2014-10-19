@@ -78,7 +78,7 @@ relative path
  
 exercises:
   
-| copy ** in your home.
+| copy *Nucleique/Rv2048c.seq* in the *unix_training* project in your home.
 
 put data from your PC to server
 ===============================
@@ -95,7 +95,7 @@ or
 
  exercise:
   
-| copy ** in your central-bio.pasteur.fr home.
+| copy *il2.fasta.aln* in your central-bio.pasteur.fr home.
 
 
 get data from server to your PC

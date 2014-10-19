@@ -1,8 +1,8 @@
 .. _Display_files:
 
-**************
-Display Files?
-**************
+*************
+Display Files
+*************
 
 cat
 ===

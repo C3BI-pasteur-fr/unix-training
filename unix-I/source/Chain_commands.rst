@@ -9,7 +9,7 @@ stdin/stderr/stdout
 
 |
 
-.. figure:: _static/images/workenv_IOInShell.gif
+.. figure:: _static/images/workenv_IOInShell.png
    :class: align-center
    :width: 600px
    
