@@ -18,9 +18,9 @@ grep
 -v
 -r
 
-=================
-Filtering results
-=================
+=========================
+Filtering/sorting results
+=========================
  
 
 cut
@@ -41,5 +41,14 @@ uniq
 
 -c
 
+usefull commands
+================
+
 xargs
 =====
+
+-I
+
+tee
+===
+
