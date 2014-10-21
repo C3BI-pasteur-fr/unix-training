@@ -122,4 +122,4 @@ tee
 ---
 
 * tee copies its input stream to the standard output and the files
-specified in argument
+  specified in argument

@@ -7,8 +7,8 @@ replace pattern
 
 tr
 ==
-* **tr**anslate
+* **tr**\ anslate
 
 sed
 ===
-* **s**tream **ed**itor
+* **s**\ tream **ed**\ itor
