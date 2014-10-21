@@ -14,15 +14,15 @@ Find a file on file system
 * **paths** = directories which are searched
 * **paths** must precede expression
 
-.. warning:: NO FIND STARTING AT /
+.. warning:: NEVER USE FIND STARTING AT /
 
-| There is a lot of criteria to find files.
-| We will see just few. 
-| For complete expression list: *man find*
+| There are lots of criteria to find files.
+| We will see just a few. 
+| For a more complete expression list: *man find*
 
 
-find a file or dir
-==================
+Find a file or a directory
+==========================
 
 * **-type** restrict the search on the type of entries.
    * **f** regular file  
@@ -54,13 +54,13 @@ Find file matching name
 Find file matching date
 =======================
 
-* **-atime n** File was last accessed n*24 hours ago.  
+* **-atime n** File was last accessed n*24 hours ago.
   When find figures out how many 24-hour periods ago the file was last accessed, 
   any fractional part is ignored, so to match -atime +1, a file has to have been
   accessed at least two days ago.
-* **-ctime n** File's data was created n*24 hours ago.  
-* **-mtime n** File's data was last modified n*24 hours ago
-* **-newer file** File was modified more recently than file.
+* **-ctime n** File was created n*24 hours ago.  
+* **-mtime n** File was last modified n*24 hours ago
+* **-newer file_b** File was last modified more recently than file_b.
 
 ::
 
@@ -70,8 +70,8 @@ Find file matching date
    find . -ctime 0
    
    
-Find file belonging someone
-===========================
+Find file by owner
+==================
 
 * **-user uname** File is owned by user uname (numeric user ID allowed)
 * **-uid n** File's numeric user ID is n.
@@ -79,8 +79,19 @@ Find file belonging someone
 * **-group gname** File belongs to group gname (numeric group ID allowed).
 * **-gid n** File's numeric group ID is n.
 
+Find files and execute a command on the result
+==============================================
 
-Find a file on file system
+* **-exec** specifies that the following command template should be executed
+  for each matching file.
+
+::
+   
+   #find each fasta file in my DataBio directory 
+   #containing the string 'ABCD'
+   find ~/DataBio -name '*.fasta' -exec grep -H ABCD {} \;
+
+Find a file on a file system
 ==========================
 
 .. warning::
