@@ -20,11 +20,25 @@ grep
 
 * **-n** (--line-number) Prefix each line of output with the 1-based line number within its input file.
 
-exercises
----------
+Exercises
+=========
 
 * count the number of sequences in the file 'abcd.fa' (a multiple fasta file)
-* can we have the same approach with a fastaq file?
+* can we have the same approach with a fastq file?
+
+grep with Regular Expressions
+=============================
+
+* **grep -E** or **egrep**
+* Regular Expressions: sequences of characters to express a pattern
+* useful metacharacters:
+
+  * **.** any character
+  * **[]** bracket expressions
+  * **^** start of the string
+  * **$** end of the string
+  * **\*** match 0 to *n* times the preceding element
+  * **{m,n}** match *m* to *n* times the preceding element
 
 
 =========================
@@ -107,5 +121,5 @@ followed by items read from standard input.
 tee
 ---
 
-
-
+* tee copies its input stream to the standard output and the files
+specified in argument
