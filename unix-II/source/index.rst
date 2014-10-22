@@ -13,7 +13,7 @@ Contents:
 
 
    Finding_Files
-   Finding_In_Files
+   Searching_And_Filtering
    Replace
    Backgrounding_tasks
    Module

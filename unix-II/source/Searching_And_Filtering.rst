@@ -1,13 +1,13 @@
-.. _Finding_In_Files:
+.. _Searching_And_Filtering:
 
 
-**********************************
-Finding inside files and filtering
-**********************************
+***********************
+Searching and Filtering
+***********************
 
-===============
-Finding in file
-===============
+==================
+Searching In Files
+==================
 
 grep
 ====
@@ -19,6 +19,28 @@ grep
 * **-r** (--recursive) Read all files under each directory, recursively, following symbolic links only if they are on the command line.
 
 * **-n** (--line-number) Prefix each line of output with the 1-based line number within its input file.
+
+FASTA file format
+=================
+
+::
+
+   >gi|5524211|gb|AAD44166.1| cytochrome b [Elephas maximus maximus]
+   LCLYTHIGRNIYYGSYLYSETWNTGIMLLLITMATAFMGYVLPWGQMSFWGATVITNLFSAIPYIGTNLV
+   EWIWGGFSVDKATLNRFFAFHFILPFTMVALAGVHLTFLHETGSNNPLGLTSDSDKIPFHPYYTIKDFLG
+   LLILILLLLLLALLSPDMLGDPDNHMPADPLNTPLHIKPEWYFLFAYAILRSVPNKLGGVLALFLSIVIL
+   GLMPFLHTSKHRSMMLRPLSQALFWTLTMDLLTLTWIGSQPVEYPYTIIGQMASILYFSIILAFLPIAGX
+   IENY
+
+FASTQ file format
+=================
+
+::
+
+   @SEQ_ID
+   GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+   +
+   !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
 Exercises
 =========
@@ -39,7 +61,17 @@ grep with Regular Expressions
   * **$** end of the string
   * **\*** match 0 to *n* times the preceding element
   * **{m,n}** match *m* to *n* times the preceding element
+  * **(one|two)** match the strings "one" or "two"
 
+Exercises
+=========
+
+* find the names of all the genes in the zipped FASTA file abcd.fa.gz
+  in the unix_training project directory of central-bio.
+
+* in the file abcd_sequences.gb, in the unix_training project directory of
+  central-bio, find the origin organism of all the sequence entries 
+  (tip: it's on a line with the ORGANISM keyword). 
 
 =========================
 Filtering/sorting results
@@ -73,8 +105,8 @@ sort
 ::
    sort 
    
-exercise
---------
+Exercise
+========
 
 We ran a blast with -m8 output. So the following fields are displayed
 
@@ -83,13 +115,15 @@ We ran a blast with -m8 output. So the following fields are displayed
 | subject start, subject end, 
 | Expect value, HSP bit score
 
+Exercise (continued)
+====================
+
 separated by ``tab``.
 
 #. copy the file *blast2_m8.txt* in the project of the course in your home.
 #. sort the output folowing the % of identity (the highest identity to the top)
 #. display only columns id of hit, percent identity, Expect value, HSP bit score
 #. store the results in a new file.
-
 
 uniq
 ====
@@ -99,11 +133,14 @@ report or omit repeated lines (Filter :red:`adjacent` matching lines)
 * **uniq [OPTION] INPUT**
 * **-c** prefix lines by the number of occurrences.
 
-exercise
---------
+Exercise
+========
 
-| from the same blast output than previous exercise. 
-| display all sequences id that match with the query.
+* eliminate duplicates from the list of organisms 
+  gathered from abcd_sequences.gb.
+
+* from the same blast output than previous exercise,
+  display all sequences id that match with the query.
 
 usefull commands
 ================
