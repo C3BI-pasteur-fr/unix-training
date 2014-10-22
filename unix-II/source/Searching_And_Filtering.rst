@@ -141,7 +141,7 @@ Exercise
   gathered from abcd_sequences.gb.
 
 * from the same blast output than previous exercise,
-  display all sequences id that match with the query.
+  display all sequence ids that match with the query.
 
 usefull commands
 ================
@@ -154,7 +154,16 @@ xargs reads items from the standard input, delimited by blanks
 or newlines, and executes the command with any initial-arguments 
 followed by items read from standard input.
 
--I
+::
+
+   find . -name '*.fasta' | xargs grep ">"
+
+* **-I** allows you to insert the line from the standard input
+  somewhere else than in the end of the command
+
+::
+
+   find . -name '*.fasta' | xargs -I fic cat fic >>allmysequences
 
 tee
 ---
