@@ -376,12 +376,14 @@ change permisions
 
    drwxr-xr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
    chmod g+w Alignment
-   drwxrgxr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
-   chmod o-rx
-   drwxrgx--- 4 bneron CIB   4096 Mar  4  2014 Alignment
-   chmod g-wo+x
+   drwxrwxr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
+   chmod o-rx  Alignment
+   drwxrwx--- 4 bneron CIB   4096 Mar  4  2014 Alignment
+   chmod g-wo+x Alignment
    chmod: invalid mode: 'g-wo+x'
-   
+   chmod go +rx Alignment
+   drwxrwxr-x 4 bneron CIB   4096 Mar  4  2014 Alignment
+      
 you can use -R option to apply permision to a directory and recursively to its contents.
 
 change permisions syntax 2
