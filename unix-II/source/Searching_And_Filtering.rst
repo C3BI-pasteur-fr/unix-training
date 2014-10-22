@@ -48,6 +48,8 @@ Exercises
 * count the number of sequences in the file 'abcd.fa' (a multiple fasta file)
 * can we have the same approach with a fastq file?
 
+
+
 grep with Regular Expressions
 =============================
 
@@ -172,8 +174,8 @@ tee
 .. figure:: _static/688px-Tee.png
    :class: align-center
    :width: 500px
-
-image from http://en.wikipedia.org/wiki/Tee_%28command%29#mediaviewer/File:Tee.svg
+   
+   http://en.wikipedia.org/wiki/Tee_%28command%29#mediaviewer/File:Tee.svg
 
 wget
 ====
