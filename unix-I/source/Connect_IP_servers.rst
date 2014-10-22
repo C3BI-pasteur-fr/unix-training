@@ -22,7 +22,7 @@ Secure Shell (SSH) is a cryptographic network protocol for secure data communica
 * ssh login_name@remote_server
 
 * on Mac osX ssh is available.
-* on windows use **putty**
+* on windows use **putty** **scputty**
 
 exercise:
 

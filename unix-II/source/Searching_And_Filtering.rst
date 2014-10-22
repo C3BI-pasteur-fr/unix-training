@@ -98,12 +98,12 @@ sort
 * **sort** - sort lines of text files
 * ``sort [OPTION]... [FILE]``
 
-* **-k** --key=KEYDEF sort via a key.
-* **-n** (--numeric-sort) compare according to string numerical value.
+* **-k** --key=KEYDEF sort via a key, KEYDEF gives location and **type**.
+* **-n** (--numeric-sort) compare according to string numerical value (OBSOLETE).
 * **-r** (--reverse) reverse the result of comparisons.
 
 ::
-   sort 
+   swho | cut -d ' ' -f 1 | sort | uniq -c | sort -k 1n,2
    
 Exercise
 ========

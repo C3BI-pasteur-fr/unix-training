@@ -28,11 +28,11 @@ unzip
 
 unzip - list, test and extract compressed files in a ZIP archive
 
-* unzip -l zipfile list archive files.
-* unzip -t zipfile test archive files. 
+* **unzip -l** zipfile list archive files.
+* **unzip -t** zipfile test archive files. 
   This option extracts each specified file in memory and it's integrity.
-* unzip zipfile 
-* unzip -d dir zipfile specify a directory to which to extract files.
+* **unzip** zipfile 
+* **unzip -d dir** zipfile specify a directory to which to extract files.
 * ...
 
 exercice:

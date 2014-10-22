@@ -194,10 +194,10 @@ or if he don't know the exact names, he can use **jockers**:
 jockers exercises
 =================
 
-* ``ls -l ~/DataBio/Sequences/Nucleique/\*.fasta``
-* ``ls -l ~/DataBio/Sequences/Proteique/\*.fasta``
-* ``ls -l ~/DataBio/Sequences/Proteique/\*.fasta``
-* ``ls -l ~/DataBio/Sequences/\*/``
+* ``ls -l ~/DataBio/Sequences/Nucleique/*.fasta``
+* ``ls -l ~/DataBio/Sequences/Proteique/*.fasta``
+* ``ls -l ~/DataBio/Sequences/Proteique/*.fasta``
+* ``ls -l ~/DataBio/Sequences/*/``
 
 * ``ls -l ~/DataBio/Sequences/*/q?1.*``
 
@@ -252,10 +252,10 @@ The **mv** command has not the same effect according src and dest are directorie
 +--------------+-----------+------------------------------------------------------------+
 | several file | file      | all src files are lost only the last one is rename as dest |
 +--------------+-----------+------------------------------------------------------------+
-| file         | dest      | all src files are moved in dest directory                  |
+| file         | dir       | all src files are moved in dest directory                  |
 |              |           | dest directory must exists. If not it is consider as file  |
 +--------------+-----------+------------------------------------------------------------+
-| dest         | dest      | all src directories are moved in dest directory            |
+| dir          | dir       | all src directories are moved in dest directory            |
 |              |           | the dest directory must already exists                     |
 +--------------+-----------+------------------------------------------------------------+
 
@@ -410,21 +410,21 @@ octal notation
 | Symbolic             | Octal    | English               |
 | Notation             | Notation |                       |
 +======================+==========+=======================+
-| \-\-\-\-\-\-\-\-\-\- | 0000     | no permissions        |
+| \-\-\-\-\-\-\-\-\-\- | 000      | no permissions        |
 +----------------------+----------+-----------------------+
-| ---x--x--x           | 0111     | execute               |
+| ---x--x--x           | 111      | execute               |
 +----------------------+----------+-----------------------+
-| --w--w--w-           | 0222     | write                 |
+| --w--w--w-           | 222      | write                 |
 +----------------------+----------+-----------------------+
-| --wx-wx-wx           | 0333     | write & execute       |
+| --wx-wx-wx           | 333      | write & execute       |
 +----------------------+----------+-----------------------+
-| -r--r--r--           | 0444     | read                  |
+| -r--r--r--           | 444      | read                  |
 +----------------------+----------+-----------------------+
-| -r-xr-xr-x           | 0555     | read & execute        |
+| -r-xr-xr-x           | 555      | read & execute        |
 +----------------------+----------+-----------------------+
-| -rw-rw-rw-           | 0666     | read & write          |
+| -rw-rw-rw-           | 666      | read & write          |
 +----------------------+----------+-----------------------+
-| -rwxrwxrwx           | 0777     | read, write & execute |
+| -rwxrwxrwx           | 777      | read, write & execute |
 +----------------------+----------+-----------------------+
 
 **exercises:**
