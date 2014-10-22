@@ -150,9 +150,10 @@ xargs
 -----
  
 build and execute command lines from standard input
-xargs reads items from the standard input, delimited by blanks
-or newlines, and executes the command with any initial-arguments 
+xargs executes the command with any initial-arguments 
 followed by items read from standard input.
+
+Do not forget to add -l to process standard input line by line
 
 ::
 
