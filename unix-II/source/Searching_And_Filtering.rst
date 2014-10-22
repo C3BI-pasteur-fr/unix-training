@@ -103,7 +103,8 @@ sort
 * **-r** (--reverse) reverse the result of comparisons.
 
 ::
-   swho | cut -d ' ' -f 1 | sort | uniq -c | sort -k 1n,2
+
+   who | cut -d ' ' -f 1 | sort | uniq -c | sort -k 1n,2
    
 Exercise
 ========
