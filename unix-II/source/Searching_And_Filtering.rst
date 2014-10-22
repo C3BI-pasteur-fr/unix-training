@@ -178,7 +178,7 @@ image from http://en.wikipedia.org/wiki/Tee_%28command%29#mediaviewer/File:Tee.s
 wget
 ====
 
-* wget is a command line utility to retrieve content from _web servers_.
+* wget is a command line utility to retrieve content from web servers.
 
 ::
 
