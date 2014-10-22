@@ -143,11 +143,8 @@ Exercise
 * from the same blast output than previous exercise,
   display all sequence ids that match with the query.
 
-usefull commands
-================
-
 xargs
------
+=====
  
 build and execute command lines from standard input
 xargs executes the command with any initial-arguments 
@@ -167,7 +164,13 @@ Do not forget to add -l to process standard input line by line
    find . -name '*.fasta' | xargs -I fic cat fic >>allmysequences
 
 tee
----
+===
 
 * tee copies its input stream to the standard output and the files
   specified in argument
+
+.. figure:: _static/688px-Tee.svg.png
+   :class: align-center
+   :width: 500px
+
+image from http://en.wikipedia.org/wiki/Tee_%28command%29#mediaviewer/File:Tee.svg
