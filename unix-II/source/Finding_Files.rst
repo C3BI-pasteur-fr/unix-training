@@ -5,8 +5,8 @@
 Finding files
 *************
 
-Find a file on file system
-==========================
+Find a file on the file system
+==============================
 
 **find** - search for files in a directory hierarch
 
@@ -14,17 +14,17 @@ Find a file on file system
 * **paths** = directories which are searched
 * **paths** must precede expression
 
-.. warning:: NEVER USE FIND STARTING AT /
+.. warning:: NEVER perform a find starting at / on the central storage.
 
 | There are lots of criteria to find files.
 | We will see just a few. 
-| For a more complete expression list: *man find*
+| For a more complete expressions list: *man find*
 
 
 Find a file or a directory
 ==========================
 
-* **-type** restrict the search on the type of entries.
+* **-type** restricts the search on the type of entries.
    * **f** regular file  
    * **d** directory
    * **l** symbolic link
@@ -34,8 +34,8 @@ Find a file or a directory
    find . -type f
 
 
-Find file matching name
-=======================
+Find files by name
+==================
 
 * **-name pattern** Base of file name (the path with the leading directories removed) matches shell pattern pattern.  
 * The metacharacters (``*``, ``?``, and ``[]``) are supported.
@@ -51,8 +51,8 @@ Find file matching name
    find . -name '*.fasta'
    
    
-Find file matching date
-=======================
+Find files by date
+==================
 
 * **-atime n** File was last accessed n*24 hours ago.
   When find figures out how many 24-hour periods ago the file was last accessed, 
@@ -70,8 +70,8 @@ Find file matching date
    find . -ctime 0
    
    
-Find file by owner
-==================
+Find files by owner
+===================
 
 * **-user uname** File is owned by user uname (numeric user ID allowed)
 * **-uid n** File's numeric user ID is n.
@@ -85,14 +85,31 @@ Find files and execute a command on the result
 * **-exec** specifies that the following command template should be executed
   for each matching file.
 
+* **{}** is replaced by the current file name
+
+* **\;** ends the command to execute
+
 ::
    
    #find each fasta file in my DataBio directory 
    #containing the string 'ABCD'
    find ~/DataBio -name '*.fasta' -exec grep -H ABCD {} \;
 
-Find a file on a file system
-==========================
+Exercises
+=========
+
+* on your virtual machine, find all the files created on tuesday in your
+  home directory.
+
+* connect to central-bio and find all the files that are owned by one of
+  your unit members in your unit directory.
+
+* on your virtual machine, find all the files containing IL2 sequences
+  (rely on the header) and move them to a new directory: use **-exec**.
+
+
+Find files on a file system
+===========================
 
 .. warning::
 
