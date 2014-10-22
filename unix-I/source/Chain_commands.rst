@@ -92,7 +92,7 @@ redirect the standard output in to a file named *filename*
   from genbank format into fasta format
 
 | The squizz command syntax: 
-| **squizz -C FASTA sequence_file**
+| **squizz -c FASTA sequence_file**
 
  
 Redirecting Standard Output
