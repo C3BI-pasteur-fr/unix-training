@@ -169,7 +169,7 @@ tee
 * tee copies its input stream to the standard output and the files
   specified in argument
 
-.. figure:: _static/688px-Tee.svg.png
+.. figure:: _static/688px-Tee.png
    :class: align-center
    :width: 500px
 
