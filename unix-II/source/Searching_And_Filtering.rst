@@ -174,3 +174,14 @@ tee
    :width: 500px
 
 image from http://en.wikipedia.org/wiki/Tee_%28command%29#mediaviewer/File:Tee.svg
+
+wget
+====
+
+* wget is a command line utility to retrieve content from _web servers_.
+
+::
+
+   wget http://www.uniprot.org/uniprot/ABCD1_MOUSE.fasta
+
+* wget also supports many different options, such as ftp, authentication, etc.
