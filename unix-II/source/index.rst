@@ -17,4 +17,5 @@ Contents:
    Replace
    Backgrounding_tasks
    Module
+   Scripting
    
