@@ -79,6 +79,7 @@ Find files by owner
 * **-group gname** File belongs to group gname (numeric group ID allowed).
 * **-gid n** File's numeric group ID is n.
 
+
 Find files and execute a command on the result
 ==============================================
 
@@ -98,15 +99,14 @@ Find files and execute a command on the result
 Exercises
 =========
 
-* on your virtual machine, find all the files created on tuesday in your
-  home directory.
-
-* connect to central-bio and find all the files that are owned by one of
-  your unit members in your unit directory.
-
-* on your virtual machine, find all the files containing IL2 sequences
-  (rely on the header) and move them to a new directory: use **-exec**.
-
+#. on your virtual machine, find all the files created on tuesday in your
+   home directory.
+#. on your virtual machine, find all the files containing IL2 sequences
+   (rely on the header) and move them to a new directory: use **-exec**.
+#. connect to central-bio and find all the files that are owned by one of
+   your unit members in your unit directory.   
+#. find file beginig with il2 or IL2 but without extensions
+   (HINT: **!** negates an expression for instance ``find . ! -type f`` match all link and dir)
 
 Find files on a file system
 ===========================
