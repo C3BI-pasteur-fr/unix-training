@@ -9,7 +9,7 @@ tr
 ==
 
 * **tr**\ anslate
-* replaces or removes characters from its input dataset
+* replaces or removes characters (**NOT** strings) from its input dataset
   (standard input)
 
 ::
@@ -29,12 +29,12 @@ sed
 
 sed read data (file or from pipe) and return the filtered data on the stdout.
 
-the sed command is very versatile, so we just view few features.
+the sed command is very versatile, so we just cover a few of its features.
 
-2 commandes to remind: 
+The two commands to remember are: 
 
 * remove lines
-* relpace pattern
+* replace patterns
 
 remove lines
 ------------
@@ -46,19 +46,19 @@ replace pattern
 ---------------
 
 * **sed 'sSEPpatternSEPreplace' file**
-* sed '/chromosome/chr/' arrayAnnot.txt
-  replace 1rst occ of *chromosome* by 'chr' in *arrayAnnot.txt*
-* sed '#chromosome#chr#' arrayAnnot.txt
-  same 
-* sed '/chromosome/chr/g' arrayAnnot.txt 
-  replace all occ of *chromosome* by 'chr' in *arrayAnnot.txt*
-* -r use extended regular expressions in the script
+* ``sed '/chromosome/chr/' arrayAnnot.txt``
+  replaces **only the 1st** occurence of *chromosome* by 'chr' in *arrayAnnot.txt*
+* ``sed '#chromosome#chr#' arrayAnnot.txt``
+  does the same.
+* ``sed '/chromosome/chr/g' arrayAnnot.txt``
+  replaces all occurences of *chromosome* by 'chr' in *arrayAnnot.txt*
+* add the **-r** option to use extended regular expressions in the script
   (sometimes you should find -E)
 
 expression
 ----------
 
-* \w  match word (alphanumeric + _) 
+* ``\w``  match word (alphanumeric + _) 
 * [0-9] digits
 
 
@@ -70,20 +70,21 @@ Exercices
 ---------
 
 #. Copy blast2_m8.txt from *projets* on central-bio in your local machine.
-   Change the name of the bank *sp* in *uniprot* of the *blast2_m8.t* file
+   Change the name of the bank *sp* into *uniprot*, in the *blast2_m8.t* file.
 #. keep only the first field (like cut)
-#. Clean the blast report to keep only the bank and the entry name like  
+#. Clean the blast report to keep only the bank and the entry name like this:
+   input:
    ``AK1BA_HUMAN sp|O08782|ALD2_CRIGR 83.23 316   53 0  1  316   1  316   0.0    537``
-   
+   output:
    ``sp:ALD2_CRIGR``
 
-Exrecises
+Exercises
 ---------
 
 We want to create a file containing the sequences from the 10 most similar sequences to il2_human 
 and align them (first step to modelize a sequence by homology).
 
-#. get il2_human sequence in fasta format
+#. get the il2_human sequence in fasta format
 #. perform a blastp 
    (``blastall -p blastp -d uniprot_sprot -i the-input -m8``)
 #. filter the output according the % of identity
@@ -91,10 +92,10 @@ and align them (first step to modelize a sequence by homology).
 #. reformat the line to keep only the bank and entry name in format (bk:entry_name)
 
 
-Exrecises (suite)
+Exercises (continued)
 -----------------
 
-#. use golden to get sequences
+#. use golden to get the sequences
 #. transform each sequence in fasta format and concatenate them in one file 
 #. run clustalw (``clustalw -align -infile=filename``)
 

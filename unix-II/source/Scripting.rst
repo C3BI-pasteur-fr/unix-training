@@ -63,8 +63,8 @@ remove '.fa' from all files terminating by 'fa.gde'
  
    for f in `ls il2*.fa.gde`
    do
-      nam=`basename $i .fa.gde`
-      mv $i $nam.gde
+      nam=`basename $f .fa.gde`
+      mv $f $nam.gde
    done
 
 exercise:
