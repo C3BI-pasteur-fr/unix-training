@@ -134,8 +134,7 @@ so we need to upgrade our location vocalbulary:
     * where a I am : **.**
     * one level up : **..**
 
-exercise:
-   use command ``cd`` to explore the file systems using relative path.
+exercise: use command ``cd`` to explore the file systems using relative path.
 
 shortcuts
 =========
