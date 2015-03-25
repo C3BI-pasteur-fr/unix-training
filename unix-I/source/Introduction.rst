@@ -54,9 +54,11 @@ Syntax: command, options, arguments
    
       * ``-`` if its a one letter option
       * ``--`` if its a word option
-      
+   
       ::
- 
+         
+         command <options> <aguments>
+         
          ls -a
          ls --all
 
