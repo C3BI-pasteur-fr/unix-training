@@ -49,7 +49,6 @@ where are your unites
    :width: 600px
 
 exercises:
-  
 | Go in your unit directory.
 | list your files and directories.
 | try to go in the unit of your neighbor.
@@ -63,9 +62,9 @@ where are your project
    :width: 600px
 
 exercises:
-  
+ 
 | Go in project "*unix_training*\ ".
-| list your files and directories.
+| **list** your files and directories.
 
 
 relative path
@@ -78,7 +77,7 @@ relative path
  
 exercises:
   
-| copy *Nucleique/Rv2048c.seq* in the *unix_training* project in your home.
+| copy *Nucleique/Rv2048c.seq* in the *unix_training* project in your home (central-bio).
 
 put data from your PC to server
 ===============================
@@ -95,7 +94,7 @@ or
 
  exercise:
   
-| copy *il2.fasta.aln* in your central-bio.pasteur.fr home.
+| copy *il2.fasta.aln* in your **central-bio.pasteur.fr** home.
 
 
 get data from server to your PC
@@ -104,7 +103,7 @@ get data from server to your PC
 
 * put the the data of your home dir or unit dir
   they will appear on your PC in @home or @unit_name volume.
-* some projects are alseo accessible. 
+* some projects are also accessible. 
 
 or
  
