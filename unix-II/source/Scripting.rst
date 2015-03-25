@@ -70,5 +70,5 @@ remove '.fa' from all files terminating by 'fa.gde'
 exercise:
 ---------
 
-#. copy the Proteique directory from the unix_training projets in central-bio in your local home
+#. copy the Proteique directory from the unix_training projets in **central-bio** in your **local** home
 #. reformat all fasta file (*.fa* file) using squizz in *gde* format.
