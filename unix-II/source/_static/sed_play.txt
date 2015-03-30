@@ -1,0 +1,10 @@
+first line
+second line nothing
+third line pattern
+forth line motif
+fifth line pattern
+sixth line motif
+seventh line nothing
+height line
+ninth line
+tenth line

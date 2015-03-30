@@ -5,6 +5,8 @@
 replace pattern
 ***************
 
+.. role:: red
+
 tr
 ==
 
@@ -35,6 +37,7 @@ The two commands to remember are:
 
 * remove lines
 * replace patterns
+* print lines
 
 remove lines
 ------------
@@ -46,11 +49,11 @@ replace pattern
 ---------------
 
 * **sed 'sSEPpatternSEPreplace' file**
-* ``sed '/chromosome/chr/' arrayAnnot.txt``
-  replaces **only the 1st** occurence of *chromosome* by 'chr' in *arrayAnnot.txt*
-* ``sed '#chromosome#chr#' arrayAnnot.txt``
+* ``sed 's/chromosome/chr/' arrayAnnot.txt``
+  replaces **only the 1st** occurence of *chromosome* by 'chr' in :red:`each line` of *arrayAnnot.txt*
+* ``sed 's#chromosome#chr#' arrayAnnot.txt``
   does the same.
-* ``sed '/chromosome/chr/g' arrayAnnot.txt``
+* ``sed 's/chromosome/chr/g' arrayAnnot.txt``
   replaces all occurences of *chromosome* by 'chr' in *arrayAnnot.txt*
 * add the **-r** option to use extended regular expressions in the script
   (sometimes you should find -E)
@@ -58,7 +61,7 @@ replace pattern
 expression
 ----------
 
-* ``\w``  match word (alphanumeric + _) 
+* ``\w``  match word (alphanumeric and _) 
 * [0-9] digits
 
 
@@ -93,11 +96,67 @@ and align them (first step to modelize a sequence by homology).
 
 
 Exercises (continued)
------------------
+---------------------
 
 #. use golden to get the sequences
 #. transform each sequence in fasta format and concatenate them in one file 
 #. run clustalw (``clustalw -align -infile=filename``)
 
 
+print lines
+-----------
 
+* **sed '#pattern#p'** 
+* print (duplicate) lines where pattern is present 
+
+usually used in combination with *-n* option 
+
+The "-n" option will not print anything unless an explicit request to print is found
+
+**sed -n -e'#pattern#p'** will print only line containing pattern
+
+Addresses
+---------
+
+Sed  commands  can  be  given with no addresses, 
+in which case the command will be executed for all input lines
+otherwise command will only be executed for input lines which match that address.
+
+
+* **number** Match  only  the specified line number.
+* **first~step** Match every step'th line starting with line first
+* **$**  Match the last line.
+* **/regexp/** Match lines matching the regular expression regexp.
+ 
+
+
+Adresses examples
+-----------------
+  
+* **sed '2p'** will duplicate the second line
+* **sed -n '1~2p'** will print all the odd-numbered lines  
+* **sed -n '2~5p'** will match every fifth line, starting with the second
+* **sed -n '$p'** will print only the last line
+* **sed -n '4,$p'** will print from the 4th to the last line (included)
+* **sed '3,5s/t/T/g'** replace every t by T from the 3rd  to the fifth line
+* **sed '/motif/s/line/sentence/'** => ??
+* **sed '1!s/l/L/g'** => ??
+
+:download:`sed_play.txt <_static/sed_play.txt>` .
+
+Exercises
+---------
+
+Transform *brca.example.illumina.0.1.fastq* *fastaq* file in *fasta* 
+(try your sed expression on *test.fastaq* before to use it on the real file)
+
+step by step
+
+#. print only header line (every 4th lines starting at the first line)
+#. replace @ by > at the begining of every header
+#. print every 4th lines starting at the second line
+
+#. How to show second read in brca.example.illumina.0.1.fastq?
+
+| http://www.grymoire.com/Unix/Sed.html
+| `sed in bioinfo <https://emb.carnegiescience.edu/sites/emb.carnegiescience.edu/files/140602-sedawkbash.key_.pdf>`_ 
