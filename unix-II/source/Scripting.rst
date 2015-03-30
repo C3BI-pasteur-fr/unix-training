@@ -72,3 +72,65 @@ exercise:
 
 #. copy the Proteique directory from the unix_training projets in **central-bio** in your **local** home
 #. reformat all fasta file (*.fa* file) using squizz in *gde* format.
+
+scripts
+-------
+
+* scripts are executables text files that contains:
+* the instruction to execute.
+* the flow control instructions.
+* a ``sheebang`` that describe the interpreter to use, eg: ``!# /bin/bash``. the ``sheebang`` must be the first line of the script.
+
+scripts arguments
+-----------------
+
+* ``$0`` name of the script
+* ``$1, $2 ... $n`` positional arguments received by the script
+* ``$#`` number of positional arguments received
+* ``$@`` list of arguments
+
+
+tests
+-----
+
+you will find 2 syntax for the test
+
+* ``[ expression ]``
+* ``test expression``
+
+expression evaluate in true (0) or false (1)
+
+* var="hello"
+* [ $var = "hello" ]
+* echo $? 
+* ==> 0 means true
+
+* var=3
+* [ $var eq 2 ]
+* echo $? 
+* ==> 1 means false
+
+put test at work
+----------------
+
+syntax: ::
+
+    #! /bin/sh
+
+    if [ $# -ee  0 ] 
+      then 
+        echo "no argument provided: exit"
+        exit 1
+    fi
+
+    if [ -f $1 ]
+      then
+        echo "file $1 exists"
+        ret=0
+      else
+        echo "file $1 does not exists"
+        ret=1
+    fi
+
+    exit $ret
+
