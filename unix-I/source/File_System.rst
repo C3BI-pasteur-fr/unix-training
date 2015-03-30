@@ -106,7 +106,7 @@ let's go for exploration
     
    * how to specify a location?
       
-         #. give absolute position of youre destination
+         #. give absolute position of your destination
          #. give relative path
       
       
@@ -129,7 +129,7 @@ relative path
    :class: align-center
    :width: 600px
 
-so we need to upgrade our location vocalbulary:
+so we need to upgrade our location vocabulary:
     
     * where a I am : **.**
     * one level up : **..**
@@ -212,7 +212,7 @@ create direcotries
 
 exercise:
 
-| go in youre home: 
+| go in your home: 
 | create a directory 
 | go in, create a directory ``sandbox``, and in this directory 2 directories ``data``, ``results``
 
