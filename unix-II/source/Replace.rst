@@ -45,12 +45,12 @@ remove lines
 replace pattern
 ---------------
 
-* **sed 'sSEPpatternSEPreplace' file**
-* ``sed '/chromosome/chr/' arrayAnnot.txt``
+* **sed 'sSEPpatternSEPreplaceSEP' file**
+* ``sed 's/chromosome/chr/' arrayAnnot.txt``
   replaces **only the 1st** occurence of *chromosome* by 'chr' in *arrayAnnot.txt*
-* ``sed '#chromosome#chr#' arrayAnnot.txt``
+* ``sed 's#chromosome#chr#' arrayAnnot.txt``
   does the same.
-* ``sed '/chromosome/chr/g' arrayAnnot.txt``
+* ``sed 's/chromosome/chr/g' arrayAnnot.txt``
   replaces all occurences of *chromosome* by 'chr' in *arrayAnnot.txt*
 * add the **-r** option to use extended regular expressions in the script
   (sometimes you should find -E)
