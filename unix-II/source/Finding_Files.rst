@@ -105,7 +105,7 @@ Exercises
    (rely on the header) and move them to a new directory: use **-exec**.
 #. connect to central-bio and find all the files that are owned by one of
    your unit members in your unit directory.   
-#. find file beginig with il2 or IL2 but without extensions
+#. find file begining with il2 or IL2 but without extensions
    (HINT: **!** negates an expression for instance ``find . ! -type f`` match all link and dir)
 
 Find files on a file system
