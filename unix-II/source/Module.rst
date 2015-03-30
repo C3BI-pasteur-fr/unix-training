@@ -42,6 +42,30 @@ get help on a module
 
 * ``module help package/vers`` display help about the package.
 
+your own modulefiles
+====================
+
+Why write your own modulefiles
+
+* ``share controled environment`` among your workmates
+* ``share coherent programs and alias`` among your workmates
+* ``set up specific tools and pipelines`` with control
+
+* see ``man modulefile`` for the syntax to use. 
+
+use your own private modulefiles
+================================
+
+* place your modulefiles under ``~/privatemodules``
+* ``module load use.own`` your modulefiles wil be available for all module commands
+
+
+use shared private modulefiles
+================================
+
+* place the modulefile under a directory with ``read permissions`` for all users you want to share.
+* tell users to isue the command ``module use`` the given directory, they will gain acces to your modulefiles.
+
 where is hide my program?
 =========================
 

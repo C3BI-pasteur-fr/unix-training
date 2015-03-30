@@ -1,5 +1,6 @@
 .. _Searching_And_Filtering:
 
+.. role:: red
 
 ***********************
 Searching and Filtering
