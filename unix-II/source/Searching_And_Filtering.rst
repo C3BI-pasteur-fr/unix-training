@@ -144,7 +144,7 @@ Exercise
   gathered from abcd_sequences.gb.
 
 * from the same blast output than previous exercise,
-  display all sequence ids that match with the query.
+  display the sequence ids of the match.
 
 xargs
 =====
